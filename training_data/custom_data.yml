@@ -1,0 +1,228 @@
+categories:
+  - greetings
+  - skintone
+  - foundation
+  - undertone
+  - skincare
+  - makeup
+  - fashion
+  - hair_color
+  - dos_and_donts
+  - glowing_skin
+
+conversations:
+  - - "Hi"
+    - "Hello"
+  
+  - - "Hello"
+    - "Hi"
+  
+  - - "Hey"
+    - "Hello"
+  
+  - - "How are you?"
+    - "Hello"
+  
+  - - "What's up?"
+    - "Hi, how can I help you?"
+  
+  - - "Good morning"
+    - "Good morning! How are you?"
+  
+  - - "Good evening"
+    - "Good evening! How can I assist you?"
+  
+  - - "Hey there"
+    - "Hello!"
+  
+  - - "Howdy"
+    - "Howdy! How can I help?"
+  
+  - - "Yo"
+    - "Hello!"
+  
+  - - "What’s going on?"
+    - "Hi, how can I help?"
+  
+  - - "Howdy, partner"
+    - "Howdy! What can I do for you?"
+  
+  - - "Hola"
+    - "Hello!"
+  
+  - - "Salut"
+    - "Hi!"
+  
+  - - "Bonjour"
+    - "Hello!"
+  
+  - - "Konnichiwa"
+    - "Hello!"
+  
+  - - "Namaste"
+    - "Hello!"
+  
+  - - "Aloha"
+    - "Hello!"
+  
+  - - "Sup?"
+    - "Hi! How can I help you today?"
+  
+  - - "Good day"
+    - "Good day! How are you?"
+  
+  - - "Good to see you"
+    - "Hello! How can I assist you?"
+  
+  - - "What’s new?"
+    - "Hi, not much! What can I do for you?"
+  
+  - - "What's happening?"
+    - "Hello, how can I help?"
+  
+  - - "Yo, what’s up?"
+    - "Hello! How are you?"
+  
+  - - "Long time no see"
+    - "Hi! How have you been?"
+  
+  - - "What’s good?"
+    - "Hello!"
+  
+  - - "How's it going?"
+    - "Hi, everything’s good! How about you?"
+  
+  - - "Are you there?"
+    - "Yes, I’m here! How can I assist?"
+  
+  - - "Is anyone there?"
+    - "Hi! Yes, I’m here to help."
+  
+  - - "Hi there!"
+    - "Hello!"
+  
+  - - "What's up with you?"
+    - "Hi! How can I help?"
+  
+  - - "Good afternoon"
+    - "Good afternoon! How’s it going?"
+  
+  - - "How's everything?"
+    - "Hi! Everything’s good. What can I do for you?"
+  
+  - - "Hey, how’s it going?"
+    - "Hello, all good! How about you?"
+  
+  - - "Goodnight"
+    - "Goodnight! Sleep well!"
+  
+  - - "Hi, what’s up?"
+    - "Hello! How can I assist?"
+  
+  - - "Are you there?"
+    - "Yes, I’m here!"
+  
+  - - "Hello there!"
+    - "Hi there! How can I help?"
+  
+  - - "Hey, what’s going on?"
+    - "Hi! Not much. How can I assist you?"
+  
+  - - "Hello, how’s your day?"
+    - "Hello! My day is good, thanks for asking. How’s yours?"
+  
+  - - "What’s cracking?"
+    - "Hello!"
+  
+  - - "What’s going down?"
+    - "Hi! Not much. How can I help?"
+  
+  - - "Hi, how’s your day going?"
+    - "Hello! It’s going well, how’s yours?"
+  
+  - - "Hey, how are things?"
+    - "Hello, everything’s great! How are you?"
+  
+  - - "What's new with you?"
+    - "Hi! Not much. How can I assist?"
+  
+  - - "What’s up, how are you?"
+    - "Hi! I’m doing well, thanks for asking. How are you?"
+  
+  - - "Hey, what's the latest?"
+    - "Hello! How can I assist you?"
+  
+  - - "What’s popping?"
+    - "Hi!"
+  
+  - - "Hello, what’s up?"
+    - "Hi! How can I help?"
+  
+  - - "Howdy, what’s up?"
+    - "Howdy! How’s it going?"
+  
+  - - "How are you today?"
+    - "Hi! I’m doing great, thank you!"
+  
+  - - "How’s everything going?"
+    - "Hi, everything’s going well. How about you?"
+  
+  - - "What’s up with you?"
+    - "Hi, not much. What can I do for you?"
+  
+  - - "What’s up today?"
+    - "Hello! How can I assist you today?"
+  
+  - - "How are you doing?"
+    - "Hi, I’m doing great! How about you?"
+  
+  - - "What's new in your world?"
+    - "Hi! How can I assist you today?"
+  
+  - - "Hey, is anyone around?"
+    - "Hello! I’m here to help."
+  
+  - - "How’s it going today?"
+    - "Hi, it’s going well! How about you?"
+  
+  - - "What’s up, how are things?"
+    - "Hello, everything’s good! How are you?"
+  
+  - - "How are you today?"
+    - "Hi! I’m doing well, thanks!"
+  
+  - - "Are you there?"
+    - "Yes, I’m here!"
+  
+  - - "Hey, what's good?"
+    - "Hello!"
+
+  - - "What is skintone?"
+    - "Skintone refers to the natural color of your skin, influenced by genetics, environment, and sun exposure."
+  
+  - - "How do I know my skintone?"
+    - "You can determine your skintone by examining the color of your veins or testing your skin against various foundation shades."
+  
+  - - "Which foundation should I use for fair skin?"
+    - "For fair skin, look for foundations with a neutral or pink undertone."
+  
+  - - "What is an undertone?"
+    - "An undertone is the underlying tone in your skin that affects how makeup colors will appear on you. There are three primary undertones: cool, warm, and neutral."
+  
+  - - "Can you suggest a foundation for medium skin?"
+    - "Medium skin tones typically suit foundations with a yellow or golden undertone."
+  
+  - - "What skincare products should I use for oily skin?"
+    - "For oily skin, use an oil-free moisturizer and a gentle cleanser. Look for products with salicylic acid or benzoyl peroxide."
+  
+  - - "What makeup suits my skin tone?"
+    - "For fair skin, go for soft pinks or peaches for blush. For medium skin, warm tones like coral work well."
+  
+  - - "What hair color suits my skin tone?"
+    - "For fair skin, blonde or light brown colors work well. Medium skin tones can pull off rich browns and reds, while dark skin tones look great with deep reds or jet black."
+  
+  - - "What are the dos and don'ts for my skin type?"
+    - "Do use sunscreen daily and moisturize. Don't use harsh exfoliants or skip sunscreen."
+  
+  - - "How can I get glowing skin?"
+    - "Use a Vitamin C serum, exfoliate regularly, and keep your skin moisturized. Don't forget sunscreen for protection!"
