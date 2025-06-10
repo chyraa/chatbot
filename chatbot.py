@@ -2,6 +2,7 @@ import yaml
 from flask import Flask, request, jsonify
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
+import os
 
 # Membuat instance Flask
 app = Flask(__name__)
@@ -51,4 +52,6 @@ def get_response(user_input):
 
 # Menjalankan aplikasi Flask
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Railway menentukan port sendiri
+    app.run(debug=False, host="0.0.0.0", port=port)
+    
