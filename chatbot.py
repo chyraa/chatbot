@@ -1,11 +1,13 @@
 import yaml
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 import os
 
 # Membuat instance Flask
 app = Flask(__name__)
+CORS(app)
 
 # Membuat instance chatbot
 chatbot = ChatBot(

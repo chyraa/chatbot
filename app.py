@@ -7,7 +7,7 @@ user_input = st.text_input("Ketik pesan:", "")
 
 if st.button("Kirim"):
     try:
-        response = requests.post("http://127.0.0.1:5000/get_response", json={"user_input": user_input})
+        response = requests.post("https://chatbot-api-production-542f.up.railway.app/", json={"user_input": user_input})
         chatbot_response = response.json().get("response", "Error: No response received")
         st.write("Chatbot:", chatbot_response)
     except requests.exceptions.ConnectionError:
