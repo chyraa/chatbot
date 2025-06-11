@@ -1,44 +1,42 @@
 import yaml
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
-import os
+from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
 
-# Membuat instance Flask
+# Inisialisasi Flask
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Memungkinkan akses dari frontend
 
-# Membuat instance chatbot
+# Cek apakah database sudah ada
+database_path = "database.db"
+database_exists = os.path.exists(database_path)
+
+# Inisialisasi ChatBot
 chatbot = ChatBot(
-    'SkintoneBot', 
+    'SkintoneBot',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
         'chatterbot.logic.BestMatch',
         'chatterbot.logic.MathematicalEvaluation',
     ],
-    database_uri='sqlite:///database.db'
+    database_uri=f'sqlite:///{database_path}'
 )
 
-# Fungsi untuk melatih chatbot dengan custom data dari custom_data.yml
-def train_custom_data():
+# Hanya latih chatbot jika database belum ada
+if not database_exists:
+    print("Melatih chatbot karena database belum ditemukan...")
+    trainer = ChatterBotCorpusTrainer(chatbot)
+    trainer.train("chatterbot.corpus.english")
+
     with open('training_data/custom_data.yml', 'r') as file:
         data = yaml.safe_load(file)
 
-    trainer = ListTrainer(chatbot)
-    
+    custom_trainer = ListTrainer(chatbot)
     for conversation in data['conversations']:
-        for i in range(0, len(conversation), 2):
-            question = conversation[i]
-            answer = conversation[i + 1]
-            trainer.train([question, answer])
-
-# Menentukan pelatihan untuk chatbot menggunakan ChatterBot Corpus
-trainer = ChatterBotCorpusTrainer(chatbot)
-trainer.train('chatterbot.corpus.english')
-
-# Melatih chatbot dengan data custom
-train_custom_data()
+        for i in range(len(conversation) - 1):
+            custom_trainer.train([conversation[i], conversation[i + 1]])
 
 # Endpoint API untuk mendapatkan respons chatbot
 @app.route('/get_response', methods=['POST'])
@@ -47,13 +45,7 @@ def get_response_api():
     response = chatbot.get_response(user_input)
     return jsonify({'response': str(response)})
 
-# Fungsi tambahan agar `get_response()` bisa dipanggil langsung dari `app.py`
-def get_response(user_input):
-    response = chatbot.get_response(user_input)
-    return str(response)
-
-# Menjalankan aplikasi Flask
+# Menjalankan aplikasi Flask dengan Gunicorn untuk Railway
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Railway menentukan port sendiri
+    port = int(os.getenv("PORT", 5000))  # Gunakan PORT dari Railway
     app.run(debug=False, host="0.0.0.0", port=port)
-    
